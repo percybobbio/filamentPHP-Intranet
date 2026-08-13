@@ -21,6 +21,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call([
+            CountriesTableSeeder::class,
+        ]);
+        
         DB::table('users')->insert([
             'name' => 'Administrator',
             'email' => 'admin@example.com',
